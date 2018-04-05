@@ -9,6 +9,9 @@ https://docs.djangoproject.com/en/1.11/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.11/ref/settings/
 """
+# -*- coding: utf-8 -*-
+
+from __future__ import unicode_literals
 
 import os
 
@@ -38,6 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
+    'main',
+    # 'management',
+
 ]
 
 MIDDLEWARE = [
@@ -121,3 +127,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
